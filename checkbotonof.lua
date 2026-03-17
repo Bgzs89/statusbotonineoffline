@@ -1,5 +1,3 @@
-link = "https://ptb.discord.com/api/webhooks/1483598868233978069/-bRZexI_AfvKlFF43oeka68GJp8e6AurvuvgzqIf7mPHm_8ODaHl88g0WtmcoC36bSm3"
-local messageId = 1483599262418997370
 local lastUpdateTime = nil  -- simpan waktu terakhir update
 
 function getTimeAgo()
