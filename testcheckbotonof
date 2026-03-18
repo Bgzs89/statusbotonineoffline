@@ -65,13 +65,13 @@ end
 while true do
     local now = os.time()
 
-    if now - lastStatusUpdate >= 30 then
-        -- Tiap 30 detik, update status + reset timer
+    if now - lastStatusUpdate >= 120 then
+        -- Tiap 120 detik, update status + reset timer
         sendOrEditStatus(true)
     else
-        -- Tiap 5 detik, cuma refresh tulisan "X detik yang lalu"
+        -- Tiap 30 detik, cuma refresh tulisan "X detik yang lalu"
         sendOrEditStatus(false)
     end
 
-    sleep(5000)
+    sleep(30000)
 end
