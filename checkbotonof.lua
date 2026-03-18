@@ -88,5 +88,5 @@ end
 
 while true do
     sendOrEditStatus()
-    sleep(60000)
+    sleep(1000)
 end
