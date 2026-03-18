@@ -1,3 +1,5 @@
+-- COPY THIS TEXT AND PASTE IN LUCIFER EXECUTOR
+
 link = "your webhook link"
 messageId = msg id -- if u dont have, use **messageId = nil** then copy id and put in here
 
