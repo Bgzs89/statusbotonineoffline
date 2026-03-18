@@ -1,6 +1,6 @@
 # ABOUT MY SCRIPT
 
-**this script is for checking bot is online or no**
+**this script is for checking bot is online or offline**
 
 **this script is work in LUCIFER growtopia**
 
@@ -16,5 +16,7 @@
 
 
 # ADDITIONAL
+
 _use this script at your own risk_
+
 _**ENJOY MY FREE SCRIPT**_
