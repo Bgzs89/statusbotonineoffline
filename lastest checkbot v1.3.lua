@@ -50,9 +50,9 @@ function sendOrEditStatus(updateStatus)
     local text = ""
 
     if #disconnected > 0 then
-        text = "<@1184002415272398898> ⚠️ Bot disconnect!\n"
+        text = "<@1184002415272398898> <a:Angry:1252211602653053008> Bot disconnect sir!!\n"
         for _, name in pairs(disconnected) do
-            text = text .. "❌ **" .. name .. "** terputus!\n"
+            text = text .. "<a:aDevilGlare:1031194205441249382> **" .. name .. "** terputus!\n"
         end
         text = text .. "\n"
     end
