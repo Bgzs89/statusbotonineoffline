@@ -66,7 +66,7 @@ function sendOrEditStatus(updateStatus)
     table.insert(lines, "\n<a:TB_warning:1101039889170046997> **Last Update:** <a:CatLaughOmegaLUL:1215609198193156099> " .. getLastUpdateTime())
 
     local wbh = Webhook.new(link)
-    wbh.content = #disconnected > 0 and "<@1184002415272398898> <a:Angry:1252211602653053008> Bot disconnect sir!!" or ""
+    wbh.content = ""
     wbh.embed1.use = true
     wbh.embed1.color = 0xFFB6C1
     wbh.embed1.description = table.concat(lines, "\n")
