@@ -6,7 +6,7 @@
 
 # HOW TO USE??
 
-**just download the _**downloadcheckbot.lua**_ file and follow the instruction xD
+> just download the _**downloadcheckbot.lua**_ file and follow the instruction xD
 
 # ADDITIONAL
 
