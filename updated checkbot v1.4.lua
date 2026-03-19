@@ -41,36 +41,44 @@ end
 
 function sendOrEditStatus(updateStatus)
     local disconnected = checkDisconnected()
-    local lines = {}
 
+    local embed = Embed.new()
+    embed.color = 0xFFB6C1
+    embed.title = "🤖 Status Semua Bot"
+
+    -- Field disconnect alert
     if #disconnected > 0 then
-        table.insert(lines, "<@1184002415272398898> <a:Angry:1252211602653053008> Bot disconnect sir!!")
+        local dcList = {}
         for _, name in ipairs(disconnected) do
-            table.insert(lines, "<a:aDevilGlare:1031194205441249382> **" .. name .. "** terputus!")
+            table.insert(dcList, "<a:aDevilGlare:1031194205441249382> **" .. name .. "** terputus!")
         end
-        table.insert(lines, "")
+        embed:addField("⚠️ Bot Disconnect!", table.concat(dcList, "\n"), false)
     end
 
-    table.insert(lines, "<a:b_animewiggle:947198246244192316>**Status Semua Bot**\n")
-
+    -- Field per bot
     for _, bot in pairs(getBots()) do
         if bot.status == BotStatus.online then
             local world = bot:getWorld()
             local worldName = world and world.name or "Unknown"
-            table.insert(lines, "<a:online:1160758807790624859>" .. bot.name .. " - Online | <:WorldList:1156644357135409262> " .. worldName)
-            table.insert(lines, "   ┗ " .. getActivity(bot))
+            local value = "<:WorldList:1156644357135409262> **World:** " .. worldName .. "\n" ..
+                          "🎮 **Activity:** " .. getActivity(bot)
+            embed:addField("<a:online:1160758807790624859> " .. bot.name .. " - Online", value, true)
         else
-            table.insert(lines, "<a:offline:1160758900279234670>" .. bot.name .. " - Offline")
+            embed:addField("<a:offline:1160758900279234670> " .. bot.name .. " - Offline", "💤 Tidak aktif", true)
         end
     end
 
-    table.insert(lines, "\n<a:TB_warning:1101039889170046997> **Last Update:** <a:CatLaughOmegaLUL:1215609198193156099>" .. getLastUpdateTime())
-
-    local embed = Embed.new()
-    embed.color = 0xFFB6C1
-    embed.description = table.concat(lines, "\n")
+    embed:addField("🕐 Last Update", getLastUpdateTime(), false)
 
     local wbh = Webhook.new(link)
+
+    -- Ping disconnect di content (luar embed)
+    if #disconnected > 0 then
+        wbh.content = "<@1184002415272398898> <a:Angry:1252211602653053008> Bot disconnect sir!!"
+    else
+        wbh.content = ""
+    end
+
     wbh:addEmbed(embed)
 
     if messageId == nil then
