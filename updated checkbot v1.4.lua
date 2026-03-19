@@ -64,7 +64,7 @@ function sendOrEditStatus(updateStatus)
         end
     end
 
-    table.insert(lines, "\n<a:TB_warning:1101039889170046997> **Last Update:** <a:CatLaughOmegaLUL:1215609198193156099>" .. getLastUpdateTime())
+    table.insert(lines, "\n<a:TB_warning:1101039889170046997>**Last Update:**" .. getLastUpdateTime())
 
     local wbh = Webhook.new(link)
     wbh.content = table.concat(lines, "\n")
