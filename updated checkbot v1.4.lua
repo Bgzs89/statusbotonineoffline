@@ -44,7 +44,6 @@ function sendOrEditStatus(updateStatus)
     local lines = {}
 
     if #disconnected > 0 then
-        table.insert(lines, "<@1184002415272398898> <a:Angry:1252211602653053008> Bot disconnect sir!!")
         for _, name in ipairs(disconnected) do
             table.insert(lines, "<a:aDevilGlare:1031194205441249382> **" .. name .. "** terputus!")
         end
@@ -67,6 +66,7 @@ function sendOrEditStatus(updateStatus)
     table.insert(lines, "\n<a:TB_warning:1101039889170046997> **Last Update:** <a:CatLaughOmegaLUL:1215609198193156099> " .. getLastUpdateTime())
 
     local wbh = Webhook.new(link)
+    wbh.content = #disconnected > 0 and "<@1184002415272398898> <a:Angry:1252211602653053008> Bot disconnect sir!!" or ""
     wbh.embed1.use = true
     wbh.embed1.color = 0xFFB6C1
     wbh.embed1.description = table.concat(lines, "\n")
