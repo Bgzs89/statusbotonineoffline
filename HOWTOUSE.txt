@@ -4,6 +4,6 @@ link = "your webhook link"
 messageId = msg id -- if u dont have, use **messageId = nil** then copy id and put in here
 
 local client = HttpClient.new()
-client.url = "https://raw.githubusercontent.com/Bgzs89/statusbotonineoffline/refs/heads/main/lastest%20checkbot%20v1.3.lua"
+client.url = "https://raw.githubusercontent.com/Bgzs89/statusbotonineoffline/refs/heads/main/updated%20checkbot%20v1.4.lua"
 local result = client:request()
 getBot():runScript(result.body)
