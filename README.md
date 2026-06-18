@@ -1,15 +1,9 @@
-# ABOUT MY SCRIPT
+# ABOUT
 
-> **this script is for checking bot is online or offline**
+> **for checking bot is online or offline**
 
-> **this script is work in LUCIFER growtopia**
+> **work in LUCIFER**
 
-# HOW TO USE??
+# HOW TO USE?
 
-> just download the _**downloadcheckbot.lua**_ file and follow the instruction xD
-
-# ADDITIONAL
-
-> _use this script at your own risk_
-
-> _**ENJOY MY FREE SCRIPT**_
+> download the _**downloadcheckbot.lua**_
